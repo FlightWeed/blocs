@@ -399,15 +399,27 @@
   </style>
 </head>
 
-<body>
-  <div class="background"></div>
+body {
+  background-color: #0d0a17;
+  background-image: url('./background.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
 
-  <main class="site">
-    <header class="topbar">
-      <div class="brand">ROBLOX</div>
-      <div class="event-badge" id="event-badge">Fall 2026</div>
-    </header>
-
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 10, 23, 0.30);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  z-index: 0;
+  pointer-events: none;
+}
     <!-- ================= LANDING PAGE ================= -->
     <section class="page" id="landing-page">
       <div class="landing">
