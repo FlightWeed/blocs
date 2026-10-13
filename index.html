@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roblox Summer Event 2026</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* =========================================================
+       EASY COLOR EDITS
+       ========================================================= */
+    :root {
+      --roblox-red: #e2231a;
+      --discord: #5865f2;
+      --discord-hover: #4752c4;
+      --bg-dark: #0a0a0f;
+      --card: rgba(16, 16, 24, 0.92);
+      --text: #f4f4f7;
+      --muted: #a2a2b0;
+      --gold: #ffc940;
+      --summer-gradient: linear-gradient(
+        135deg,
+        #ff6b35 0%,
+        #f7c948 30%,
+        #00b06f 60%,
+        #00a2ff 100%
+      );
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: var(--bg-dark);
+      color: var(--text);
+      font-family: "Nunito", sans-serif;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background-image: url("images/roblox-bg.png");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .background::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(10, 10, 15, 0.72) 0%,
+        rgba(10, 10, 15, 0.94) 100%
+      );
+    }
+
+    .site {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(10, 10, 15, 0.62);
+      backdrop-filter: blur(20px);
+    }
+
+    .brand {
+      font-family: "Fredoka", sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .event-badge {
+      border-radius: 999px;
+      padding: 5px 12px;
+      background: var(--summer-gradient);
+      color: #000;
+      font-family: "Fredoka", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+
+    .page {
+      display: flex;
+      min-height: calc(100vh - 55px);
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .landing {
+      width: 100%;
+      max-width: 640px;
+      text-align: center;
+      animation: fade-up 0.65s ease;
+    }
+
+    .summer-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 201, 64, 0.24);
+      border-radius: 999px;
+      padding: 8px 18px;
+      background: rgba(255, 201, 64, 0.1);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      margin-bottom: 16px;
+      font-family: "Fredoka", sans-serif;
+      font-size: clamp(38px, 7vw, 64px);
+      font-weight: 700;
+      line-height: 1.08;
+      text-shadow: 0 4px 28px rgba(0, 0, 0, 0.45);
+    }
+
+    .gradient-text {
+      background: var(--summer-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      max-width: 560px;
+      margin: 0 auto 34px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .input-group {
+      display: flex;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.38);
+    }
+
+    .input-group input {
+      min-width: 0;
+      flex: 1;
+      border: 0;
+      outline: 0;
+      padding: 17px 20px;
+      background: rgba(28, 28, 40, 0.94);
+      color: var(--text);
+      font: 600 16px "Nunito", sans-serif;
+    }
+
+    .input-group input::placeholder {
+      color: #858594;
+    }
+
+    .start-btn {
+      display: flex;
+      min-width: 128px;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      padding: 17px 24px;
+      background: var(--roblox-red);
+      color: #fff;
+      cursor: pointer;
+      font: 600 15px "Fredoka", sans-serif;
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+
+    .start-btn:hover {
+      filter: brightness(0.92);
+    }
+
+    .start-btn:active {
+      transform: scale(0.98);
+    }
+
+    .error {
+      margin-top: 12px;
+      color: #ff7676;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       CLEAN DISCORD INSTRUCTION SCREEN
+       ========================================================= */
+    .discord-card {
+      width: 100%;
+      max-width: 560px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 42px 34px;
+      background: var(--card);
+      backdrop-filter: blur(24px);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+      text-align: center;
+      animation: fade-up 0.55s ease;
+    }
+
+    .discord-icon-large {
+      display: grid;
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 22px;
+      place-items: center;
+      border-radius: 20px;
+      background: rgba(88, 101, 242, 0.14);
+      color: #7b86ff;
+    }
+
+    .discord-icon-large svg {
+      width: 38px;
+      height: 38px;
+    }
+
+    .discord-card h2 {
+      margin-bottom: 12px;
+      font-family: "Fredoka", sans-serif;
+      font-size: clamp(28px, 5vw, 38px);
+      font-weight: 700;
+    }
+
+    .discord-card p {
+      max-width: 440px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .instruction-steps {
+      display: grid;
+      gap: 12px;
+      max-width: 450px;
+      margin: 0 auto 26px;
+      text-align: left;
+    }
+
+    .instruction-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px;
+      padding: 14px 15px;
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .step-number {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(88, 101, 242, 0.16);
+      color: #9aa2ff;
+      font: 800 13px "Fredoka", sans-serif;
+    }
+
+    .step-copy strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--text);
+      font-family: "Fredoka", sans-serif;
+      font-size: 15px;
+    }
+
+    .step-copy span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .discord-btn {
+      display: inline-flex;
+      min-width: 240px;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      border-radius: 13px;
+      padding: 16px 26px;
+      background: var(--discord);
+      color: #fff;
+      text-decoration: none;
+      font: 700 16px "Fredoka", sans-serif;
+      transition: transform 0.16s ease, background 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .discord-btn:hover {
+      transform: translateY(-2px);
+      background: var(--discord-hover);
+      box-shadow: 0 12px 30px rgba(88, 101, 242, 0.28);
+    }
+
+    .discord-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    .back-btn {
+      margin-top: 22px;
+      border: 0;
+      background: transparent;
+      color: #858594;
+      cursor: pointer;
+      font: 700 13px "Nunito", sans-serif;
+    }
+
+    .back-btn:hover {
+      color: var(--text);
+    }
+
+    .footer {
+      padding: 24px;
+      color: rgba(162, 162, 176, 0.5);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar {
+        padding: 12px 16px;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .page {
+        padding: 30px 18px;
+      }
+
+      .input-group {
+        flex-direction: column;
+      }
+
+      .start-btn {
+        width: 100%;
+      }
+
+      .discord-card {
+        padding: 34px 22px;
+      }
+
+      .discord-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background"></div>
+
+  <main class="site">
+    <header class="topbar">
+      <div class="brand">ROBLOX</div>
+      <div class="event-badge" id="event-badge">Fall 2026</div>
+    </header>
+
+    <!-- ================= LANDING PAGE ================= -->
+    <section class="page" id="landing-page">
+      <div class="landing">
+        <div class="summer-tag" id="summer-tag">☀ Fall Roblox Event</div>
+
+        <h1 class="hero-title" id="hero-title">
+          Earn <span class="gradient-text">Free Robux</span><br />This Fall
+        </h1>
+
+        <p class="hero-subtitle" id="hero-subtitle">
+          Enter your Roblox username below to get started.
+        </p>
+
+        <div class="input-group">
+          <input
+            id="username-input"
+            type="text"
+            placeholder="Enter your Roblox username..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button class="start-btn" id="start-btn" type="button">
+            Get Started
+          </button>
+        </div>
+
+        <div class="error" id="error-message" hidden></div>
+      </div>
+    </section>
+
+    <!-- ============== SIMPLE DISCORD PAGE ============== -->
+    <section class="page hidden" id="discord-page">
+      <div class="discord-card">
+        <div class="discord-icon-large" aria-hidden="true">
+          <svg viewBox="0 0 127.14 96.36" role="img">
+            <path
+              fill="currentColor"
+              d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0 105.89 105.89 0 0 0 19.39 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.17 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2 20.94 9.72 43.68 9.72 64.37 0 .87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.17 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.95-72.16ZM42.45 65.69C36.18 65.69 31 59.96 31 52.91s5.06-12.8 11.43-12.8 11.54 5.78 11.43 12.8c.01 7.05-5.06 12.78-11.41 12.78Zm42.24 0c-6.27 0-11.45-5.73-11.45-12.78s5.06-12.8 11.45-12.8 11.54 5.78 11.43 12.8c0 7.05-5.06 12.78-11.43 12.78Z"
+            />
+          </svg>
+        </div>
+
+        <h2 id="discord-heading">Complete the Final Steps</h2>
+
+        <p id="discord-instruction">
+          Complete these simple steps to finish your reward setup.
+        </p>
+
+        <div class="instruction-steps" aria-label="Reward instructions">
+          <div class="instruction-step">
+            <div class="step-number">1</div>
+            <div class="step-copy">
+              <strong>Join the Discord</strong>
+              <span>Tap the button below to join the official Discord server.</span>
+            </div>
+          </div>
+
+          <div class="instruction-step">
+            <div class="step-number">2</div>
+            <div class="step-copy">
+              <strong>Follow the server instructions</strong>
+              <span>Once you join, follow the instructions shown inside the server.</span>
+            </div>
+          </div>
+
+          <div class="instruction-step">
+            <div class="step-number">3</div>
+            <div class="step-copy">
+              <strong>Complete the required steps</strong>
+              <span>Finish the listed steps in Discord to complete the reward process.</span>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="discord-btn"
+          id="discord-button"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 127.14 96.36" aria-hidden="true">
+            <path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0 105.89 105.89 0 0 0 19.39 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.17 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2 20.94 9.72 43.68 9.72 64.37 0 .87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.17 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.95-72.16ZM42.45 65.69C36.18 65.69 31 59.96 31 52.91s5.06-12.8 11.43-12.8 11.54 5.78 11.43 12.8c.01 7.05-5.06 12.78-11.41 12.78Zm42.24 0c-6.27 0-11.45-5.73-11.45-12.78s5.06-12.8 11.45-12.8 11.54 5.78 11.43 12.8c0 7.05-5.06 12.78-11.43 12.78Z" />
+          </svg>
+          <span id="discord-button-text">Join Official Discord</span>
+        </a>
+
+        <button class="back-btn" id="back-btn" type="button">
+          Use a different username
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer-text">Summer Roblox Event 2026</footer>
+  </main>
+
+  <script>
+    /* =========================================================
+       QUICK EDIT SETTINGS
+       Change the text/link here. You normally won't need to
+       touch anything else in this file.
+       ========================================================= */
+    const SETTINGS = {
+      discordUrl: "https://discord.gg/kGfr29abS",
+
+      eventBadge: "Summer 2026",
+      summerTag: "☀ Summer Roblox Event",
+      heroTitleHtml:
+        'Earn <span class="gradient-text">Free Robux</span><br>This Summer',
+      heroSubtitle: "Enter your Roblox username below to get started.",
+
+      discordHeading: "Complete the Final Steps",
+      discordInstruction:
+        "Complete these simple steps to finish your reward setup.",
+      discordButtonText: "Join Official Discord",
+
+      footerText: "Summer Roblox Event 2026",
+      backgroundImage: "images/roblox-bg.png",
+    };
+
+    /* =========================================================
+       PAGE LOGIC
+       ========================================================= */
+    const landingPage = document.getElementById("landing-page");
+    const discordPage = document.getElementById("discord-page");
+    const usernameInput = document.getElementById("username-input");
+    const startButton = document.getElementById("start-btn");
+    const backButton = document.getElementById("back-btn");
+    const errorMessage = document.getElementById("error-message");
+
+    function applySettings() {
+      document.getElementById("event-badge").textContent = SETTINGS.eventBadge;
+      document.getElementById("summer-tag").textContent = SETTINGS.summerTag;
+      document.getElementById("hero-title").innerHTML = SETTINGS.heroTitleHtml;
+      document.getElementById("hero-subtitle").textContent = SETTINGS.heroSubtitle;
+      document.getElementById("discord-heading").textContent = SETTINGS.discordHeading;
+      document.getElementById("discord-instruction").textContent =
+        SETTINGS.discordInstruction;
+      document.getElementById("discord-button-text").textContent =
+        SETTINGS.discordButtonText;
+      document.getElementById("discord-button").href = SETTINGS.discordUrl;
+      document.getElementById("footer-text").textContent = SETTINGS.footerText;
+      document.querySelector(".background").style.backgroundImage =
+        `url('${SETTINGS.backgroundImage}')`;
+    }
+
+    function continueToDiscord() {
+      const username = usernameInput.value.trim();
+
+      if (!username) {
+        errorMessage.textContent = "Please enter your Roblox username.";
+        errorMessage.hidden = false;
+        return;
+      }
+
+      errorMessage.hidden = true;
+      landingPage.classList.add("hidden");
+      discordPage.classList.remove("hidden");
+    }
+
+    function goBack() {
+      discordPage.classList.add("hidden");
+      landingPage.classList.remove("hidden");
+      usernameInput.focus();
+    }
+
+    startButton.addEventListener("click", continueToDiscord);
+    backButton.addEventListener("click", goBack);
+    usernameInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") continueToDiscord();
+    });
+
+    applySettings();
+  </script>
+</body>
+</html>
