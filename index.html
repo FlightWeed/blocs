@@ -21,8 +21,9 @@
       --bg-dark: #0a0a0f;
       --card: rgba(16, 16, 24, 0.92);
       --text: #f4f4f7;
-      --muted: #a2a2b0;
+      --muted: #c1c1ce;
       --gold: #ffc940;
+
       --summer-gradient: linear-gradient(
         135deg,
         #ff6b35 0%,
@@ -38,32 +39,45 @@
       padding: 0;
     }
 
+    html {
+      min-height: 100%;
+      background: var(--bg-dark);
+    }
+
     body {
       min-height: 100vh;
+      min-height: 100dvh;
       overflow-x: hidden;
       background: var(--bg-dark);
       color: var(--text);
       font-family: "Nunito", sans-serif;
     }
 
+    /* =========================================================
+       FULL-SCREEN BACKGROUND
+       background.jpg must be in the same folder as index.html.
+       ========================================================= */
     .background {
       position: fixed;
       inset: 0;
+      width: 100%;
+      height: 100%;
       z-index: 0;
-      background-image: url("images/roblox-bg.png");
-      background-position: center;
+
+      background-image: url("/background.jpg");
+      background-position: center center;
       background-size: cover;
+      background-repeat: no-repeat;
+      background-color: var(--bg-dark);
     }
 
+    /* Lighter overlay so the Roblox collage remains visible */
     .background::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(
-        ellipse at center,
-        rgba(10, 10, 15, 0.72) 0%,
-        rgba(10, 10, 15, 0.94) 100%
-      );
+      background: rgba(10, 10, 15, 0.48);
+      pointer-events: none;
     }
 
     .site {
@@ -71,17 +85,23 @@
       z-index: 1;
       display: flex;
       min-height: 100vh;
+      min-height: 100dvh;
       flex-direction: column;
     }
 
+    /* =========================================================
+       TOP BAR
+       ========================================================= */
     .topbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
       padding: 14px 24px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      background: rgba(10, 10, 15, 0.62);
-      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(10, 10, 15, 0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
     .brand {
@@ -93,7 +113,7 @@
 
     .event-badge {
       border-radius: 999px;
-      padding: 5px 12px;
+      padding: 6px 13px;
       background: var(--summer-gradient);
       color: #000;
       font-family: "Fredoka", sans-serif;
@@ -101,11 +121,16 @@
       font-weight: 700;
       letter-spacing: 1.3px;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
+    /* =========================================================
+       PAGE LAYOUT
+       ========================================================= */
     .page {
       display: flex;
       min-height: calc(100vh - 55px);
+      min-height: calc(100dvh - 55px);
       flex: 1;
       align-items: center;
       justify-content: center;
@@ -113,9 +138,12 @@
     }
 
     .hidden {
-      display: none;
+      display: none !important;
     }
 
+    /* =========================================================
+       LANDING PAGE
+       ========================================================= */
     .landing {
       width: 100%;
       max-width: 640px;
@@ -126,12 +154,13 @@
     .summer-tag {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       margin-bottom: 24px;
-      border: 1px solid rgba(255, 201, 64, 0.24);
+      border: 1px solid rgba(255, 201, 64, 0.4);
       border-radius: 999px;
       padding: 8px 18px;
-      background: rgba(255, 201, 64, 0.1);
+      background: rgba(30, 25, 14, 0.75);
       color: var(--gold);
       font-size: 12px;
       font-weight: 800;
@@ -145,7 +174,7 @@
       font-size: clamp(38px, 7vw, 64px);
       font-weight: 700;
       line-height: 1.08;
-      text-shadow: 0 4px 28px rgba(0, 0, 0, 0.45);
+      text-shadow: 0 4px 28px rgba(0, 0, 0, 0.7);
     }
 
     .gradient-text {
@@ -158,20 +187,25 @@
     .hero-subtitle {
       max-width: 560px;
       margin: 0 auto 34px;
-      color: var(--muted);
+      color: #e0e0e9;
       font-size: 16px;
       line-height: 1.6;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
     }
 
+    /* =========================================================
+       USERNAME INPUT
+       ========================================================= */
     .input-group {
       display: flex;
       width: 100%;
       max-width: 480px;
       margin: 0 auto;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 15px;
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.38);
+      background: rgba(28, 28, 40, 0.96);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
     }
 
     .input-group input {
@@ -180,13 +214,13 @@
       border: 0;
       outline: 0;
       padding: 17px 20px;
-      background: rgba(28, 28, 40, 0.94);
+      background: transparent;
       color: var(--text);
       font: 600 16px "Nunito", sans-serif;
     }
 
     .input-group input::placeholder {
-      color: #858594;
+      color: #a3a3b3;
     }
 
     .start-btn {
@@ -213,23 +247,25 @@
 
     .error {
       margin-top: 12px;
-      color: #ff7676;
+      color: #ff9292;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
+      text-shadow: 0 2px 8px #000;
     }
 
     /* =========================================================
-       CLEAN DISCORD INSTRUCTION SCREEN
+       DISCORD INSTRUCTION SCREEN
        ========================================================= */
     .discord-card {
       width: 100%;
       max-width: 560px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 24px;
       padding: 42px 34px;
-      background: var(--card);
+      background: rgba(16, 16, 24, 0.94);
       backdrop-filter: blur(24px);
-      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
       text-align: center;
       animation: fade-up 0.55s ease;
     }
@@ -241,8 +277,8 @@
       margin: 0 auto 22px;
       place-items: center;
       border-radius: 20px;
-      background: rgba(88, 101, 242, 0.14);
-      color: #7b86ff;
+      background: rgba(88, 101, 242, 0.18);
+      color: #9ba4ff;
     }
 
     .discord-icon-large svg {
@@ -277,10 +313,10 @@
       display: flex;
       align-items: flex-start;
       gap: 13px;
-      border: 1px solid rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.09);
       border-radius: 14px;
       padding: 14px 15px;
-      background: rgba(255, 255, 255, 0.035);
+      background: rgba(255, 255, 255, 0.045);
     }
 
     .step-number {
@@ -290,8 +326,8 @@
       flex: 0 0 30px;
       place-items: center;
       border-radius: 50%;
-      background: rgba(88, 101, 242, 0.16);
-      color: #9aa2ff;
+      background: rgba(88, 101, 242, 0.2);
+      color: #b2b8ff;
       font: 800 13px "Fredoka", sans-serif;
     }
 
@@ -321,7 +357,10 @@
       color: #fff;
       text-decoration: none;
       font: 700 16px "Fredoka", sans-serif;
-      transition: transform 0.16s ease, background 0.16s ease, box-shadow 0.16s ease;
+      transition:
+        transform 0.16s ease,
+        background 0.16s ease,
+        box-shadow 0.16s ease;
     }
 
     .discord-btn:hover {
@@ -340,7 +379,7 @@
       margin-top: 22px;
       border: 0;
       background: transparent;
-      color: #858594;
+      color: #b0b0bf;
       cursor: pointer;
       font: 700 13px "Nunito", sans-serif;
     }
@@ -349,24 +388,35 @@
       color: var(--text);
     }
 
+    /* =========================================================
+       FOOTER
+       ========================================================= */
     .footer {
       padding: 24px;
-      color: rgba(162, 162, 176, 0.5);
+      color: rgba(235, 235, 245, 0.7);
       font-size: 12px;
       text-align: center;
+      text-shadow: 0 2px 8px #000;
     }
 
+    /* =========================================================
+       ANIMATION
+       ========================================================= */
     @keyframes fade-up {
       from {
         opacity: 0;
         transform: translateY(18px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
+    /* =========================================================
+       MOBILE
+       ========================================================= */
     @media (max-width: 600px) {
       .topbar {
         padding: 12px 16px;
@@ -380,12 +430,37 @@
         padding: 30px 18px;
       }
 
+      .landing {
+        max-width: 100%;
+      }
+
+      .summer-tag {
+        margin-bottom: 24px;
+        padding: 8px 14px;
+        font-size: 11px;
+      }
+
+      .hero-title {
+        font-size: clamp(36px, 9vw, 52px);
+      }
+
+      .hero-subtitle {
+        font-size: 15px;
+        margin-bottom: 30px;
+      }
+
       .input-group {
         flex-direction: column;
       }
 
+      .input-group input {
+        width: 100%;
+        padding: 18px 20px;
+      }
+
       .start-btn {
         width: 100%;
+        min-height: 58px;
       }
 
       .discord-card {
@@ -395,54 +470,78 @@
       .discord-btn {
         width: 100%;
       }
+
+      .footer {
+        padding: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="background"></div>
+  <div class="background" aria-hidden="true"></div>
 
   <main class="site">
     <header class="topbar">
       <div class="brand">ROBLOX</div>
-      <div class="event-badge" id="event-badge">Fall 2026</div>
+      <div class="event-badge" id="event-badge">Summer 2026</div>
     </header>
 
-    <!-- ================= LANDING PAGE ================= -->
+    <!-- LANDING PAGE -->
     <section class="page" id="landing-page">
       <div class="landing">
-        <div class="summer-tag" id="summer-tag">☀ Fall Roblox Event</div>
+        <div class="summer-tag" id="summer-tag">
+          ☀ Summer Roblox Event
+        </div>
 
         <h1 class="hero-title" id="hero-title">
-          Earn <span class="gradient-text">Free Robux</span><br />This Fall
+          Earn <span class="gradient-text">Free Robux</span><br />
+          This Summer
         </h1>
 
         <p class="hero-subtitle" id="hero-subtitle">
           Enter your Roblox username below to get started.
         </p>
 
-        <div class="input-group">
+        <form class="input-group" id="username-form">
           <input
             id="username-input"
             type="text"
             placeholder="Enter your Roblox username..."
             autocomplete="off"
             spellcheck="false"
+            aria-label="Roblox username"
+            required
           />
-          <button class="start-btn" id="start-btn" type="button">
+
+          <button class="start-btn" id="start-btn" type="submit">
             Get Started
           </button>
-        </div>
+        </form>
 
-        <div class="error" id="error-message" hidden></div>
+        <div
+          class="error"
+          id="error-message"
+          role="alert"
+          hidden
+        ></div>
       </div>
     </section>
 
-    <!-- ============== SIMPLE DISCORD PAGE ============== -->
+    <!-- DISCORD INSTRUCTION PAGE -->
     <section class="page hidden" id="discord-page">
       <div class="discord-card">
         <div class="discord-icon-large" aria-hidden="true">
-          <svg viewBox="0 0 127.14 96.36" role="img">
+          <svg viewBox="0 0 127.14 96.36">
             <path
               fill="currentColor"
               d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0 105.89 105.89 0 0 0 19.39 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.17 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2 20.94 9.72 43.68 9.72 64.37 0 .87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.17 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.95-72.16ZM42.45 65.69C36.18 65.69 31 59.96 31 52.91s5.06-12.8 11.43-12.8 11.54 5.78 11.43 12.8c.01 7.05-5.06 12.78-11.41 12.78Zm42.24 0c-6.27 0-11.45-5.73-11.45-12.78s5.06-12.8 11.45-12.8 11.54 5.78 11.43 12.8c0 7.05-5.06 12.78-11.43 12.78Z"
@@ -453,31 +552,37 @@
         <h2 id="discord-heading">Complete the Final Steps</h2>
 
         <p id="discord-instruction">
-          Complete these simple steps to finish your reward setup.
+          Join our Discord server to view the event information and instructions.
         </p>
 
-        <div class="instruction-steps" aria-label="Reward instructions">
+        <div class="instruction-steps" aria-label="Instructions">
           <div class="instruction-step">
             <div class="step-number">1</div>
             <div class="step-copy">
               <strong>Join the Discord</strong>
-              <span>Tap the button below to join the official Discord server.</span>
+              <span>
+                Tap the button below to visit the Discord server.
+              </span>
             </div>
           </div>
 
           <div class="instruction-step">
             <div class="step-number">2</div>
             <div class="step-copy">
-              <strong>Follow the server instructions</strong>
-              <span>Once you join, follow the instructions shown inside the server.</span>
+              <strong>Review the server information</strong>
+              <span>
+                Read the server rules and event information before participating.
+              </span>
             </div>
           </div>
 
           <div class="instruction-step">
             <div class="step-number">3</div>
             <div class="step-copy">
-              <strong>Complete the required steps</strong>
-              <span>Finish the listed steps in Discord to complete the reward process.</span>
+              <strong>Protect your account</strong>
+              <span>
+                Never share your Roblox password or verification codes with anyone.
+              </span>
             </div>
           </div>
         </div>
@@ -485,101 +590,153 @@
         <a
           class="discord-btn"
           id="discord-button"
-          href="#"
+          href="https://discord.gg/kGfr29abS"
           target="_blank"
           rel="noopener noreferrer"
         >
           <svg viewBox="0 0 127.14 96.36" aria-hidden="true">
-            <path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0 105.89 105.89 0 0 0 19.39 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.17 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2 20.94 9.72 43.68 9.72 64.37 0 .87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.17 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.95-72.16ZM42.45 65.69C36.18 65.69 31 59.96 31 52.91s5.06-12.8 11.43-12.8 11.54 5.78 11.43 12.8c.01 7.05-5.06 12.78-11.41 12.78Zm42.24 0c-6.27 0-11.45-5.73-11.45-12.78s5.06-12.8 11.45-12.8 11.54 5.78 11.43 12.8c0 7.05-5.06 12.78-11.43 12.78Z" />
+            <path
+              d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0 105.89 105.89 0 0 0 19.39 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.17 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2 20.94 9.72 43.68 9.72 64.37 0 .87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.17 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.95-72.16ZM42.45 65.69C36.18 65.69 31 59.96 31 52.91s5.06-12.8 11.43-12.8 11.54 5.78 11.43 12.8c.01 7.05-5.06 12.78-11.41 12.78Zm42.24 0c-6.27 0-11.45-5.73-11.45-12.78s5.06-12.8 11.45-12.8 11.54 5.78 11.43 12.8c0 7.05-5.06 12.78-11.43 12.78Z"
+            />
           </svg>
+
           <span id="discord-button-text">Join Official Discord</span>
         </a>
 
         <button class="back-btn" id="back-btn" type="button">
-          Use a different username
+          Go Back
         </button>
       </div>
     </section>
 
-    <footer class="footer" id="footer-text">Summer Roblox Event 2026</footer>
+    <footer class="footer" id="footer-text">
+      Summer Roblox Event 2026
+    </footer>
   </main>
 
   <script>
     /* =========================================================
        QUICK EDIT SETTINGS
-       Change the text/link here. You normally won't need to
-       touch anything else in this file.
        ========================================================= */
     const SETTINGS = {
       discordUrl: "https://discord.gg/kGfr29abS",
 
       eventBadge: "Summer 2026",
       summerTag: "☀ Summer Roblox Event",
+
       heroTitleHtml:
         'Earn <span class="gradient-text">Free Robux</span><br>This Summer',
-      heroSubtitle: "Enter your Roblox username below to get started.",
 
-      discordHeading: "Complete the Final Steps",
+      heroSubtitle:
+        "Enter your Roblox username below to get started.",
+
+      discordHeading:
+        "Complete the Final Steps",
+
       discordInstruction:
-        "Complete these simple steps to finish your reward setup.",
-      discordButtonText: "Join Official Discord",
+        "Join our Discord server to view the event information and instructions.",
 
-      footerText: "Summer Roblox Event 2026",
-      backgroundImage: "images/roblox-bg.png",
+      discordButtonText:
+        "Join Official Discord",
+
+      footerText:
+        "Summer Roblox Event 2026",
+
+      /* Keep background.jpg beside index.html in GitHub */
+      backgroundImage:
+        "/background.jpg",
     };
 
     /* =========================================================
-       PAGE LOGIC
+       PAGE ELEMENTS
        ========================================================= */
     const landingPage = document.getElementById("landing-page");
     const discordPage = document.getElementById("discord-page");
     const usernameInput = document.getElementById("username-input");
-    const startButton = document.getElementById("start-btn");
+    const usernameForm = document.getElementById("username-form");
     const backButton = document.getElementById("back-btn");
     const errorMessage = document.getElementById("error-message");
 
+    /* =========================================================
+       APPLY SETTINGS
+       ========================================================= */
     function applySettings() {
-      document.getElementById("event-badge").textContent = SETTINGS.eventBadge;
-      document.getElementById("summer-tag").textContent = SETTINGS.summerTag;
-      document.getElementById("hero-title").innerHTML = SETTINGS.heroTitleHtml;
-      document.getElementById("hero-subtitle").textContent = SETTINGS.heroSubtitle;
-      document.getElementById("discord-heading").textContent = SETTINGS.discordHeading;
+      document.getElementById("event-badge").textContent =
+        SETTINGS.eventBadge;
+
+      document.getElementById("summer-tag").textContent =
+        SETTINGS.summerTag;
+
+      document.getElementById("hero-title").innerHTML =
+        SETTINGS.heroTitleHtml;
+
+      document.getElementById("hero-subtitle").textContent =
+        SETTINGS.heroSubtitle;
+
+      document.getElementById("discord-heading").textContent =
+        SETTINGS.discordHeading;
+
       document.getElementById("discord-instruction").textContent =
         SETTINGS.discordInstruction;
+
       document.getElementById("discord-button-text").textContent =
         SETTINGS.discordButtonText;
-      document.getElementById("discord-button").href = SETTINGS.discordUrl;
-      document.getElementById("footer-text").textContent = SETTINGS.footerText;
+
+      document.getElementById("discord-button").href =
+        SETTINGS.discordUrl;
+
+      document.getElementById("footer-text").textContent =
+        SETTINGS.footerText;
+
       document.querySelector(".background").style.backgroundImage =
-        `url('${SETTINGS.backgroundImage}')`;
+        `url("${SETTINGS.backgroundImage}")`;
     }
 
-    function continueToDiscord() {
+    /* =========================================================
+       LANDING PAGE INTERACTION
+       ========================================================= */
+    function continueToDiscord(event) {
+      event.preventDefault();
+
       const username = usernameInput.value.trim();
 
       if (!username) {
-        errorMessage.textContent = "Please enter your Roblox username.";
+        errorMessage.textContent =
+          "Please enter your Roblox username.";
+
         errorMessage.hidden = false;
+        usernameInput.focus();
         return;
       }
 
       errorMessage.hidden = true;
       landingPage.classList.add("hidden");
       discordPage.classList.remove("hidden");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
 
     function goBack() {
       discordPage.classList.add("hidden");
       landingPage.classList.remove("hidden");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
       usernameInput.focus();
     }
 
-    startButton.addEventListener("click", continueToDiscord);
+    usernameForm.addEventListener("submit", continueToDiscord);
     backButton.addEventListener("click", goBack);
-    usernameInput.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") continueToDiscord();
-    });
 
+    /* =========================================================
+       INITIALIZE
+       ========================================================= */
     applySettings();
   </script>
 </body>
