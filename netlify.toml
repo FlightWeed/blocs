@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Keep the root page available for direct navigation to the site.
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200

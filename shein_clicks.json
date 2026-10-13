@@ -1,0 +1,687 @@
+[
+    {
+        "time": "2026-09-28 20:46:51",
+        "timestamp": 1790628411,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 22:18:40",
+        "timestamp": 1790374720,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 22:06:52",
+        "timestamp": 1790374012,
+        "store": "playstore"
+    },
+    {
+        "time": "2026-09-25 14:14:31",
+        "timestamp": 1790345671,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 01:42:19",
+        "timestamp": 1790300539,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 01:07:06",
+        "timestamp": 1790298426,
+        "store": "playstore"
+    },
+    {
+        "time": "2026-09-25 01:02:52",
+        "timestamp": 1790298172,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 01:02:52",
+        "timestamp": 1790298172,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 01:02:51",
+        "timestamp": 1790298171,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 01:01:59",
+        "timestamp": 1790298119,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:57:53",
+        "timestamp": 1790297873,
+        "store": "playstore"
+    },
+    {
+        "time": "2026-09-25 00:50:44",
+        "timestamp": 1790297444,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:48:49",
+        "timestamp": 1790297329,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:48:48",
+        "timestamp": 1790297328,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:47:13",
+        "timestamp": 1790297233,
+        "store": "unknown"
+    },
+    {
+        "time": "2026-09-25 00:46:59",
+        "timestamp": 1790297219,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:46:52",
+        "timestamp": 1790297212,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:46:23",
+        "timestamp": 1790297183,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:46:23",
+        "timestamp": 1790297183,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:46:22",
+        "timestamp": 1790297182,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:46:21",
+        "timestamp": 1790297181,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:45:51",
+        "timestamp": 1790297151,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:43:47",
+        "timestamp": 1790297027,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:43:22",
+        "timestamp": 1790297002,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:37:28",
+        "timestamp": 1790296648,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:37:22",
+        "timestamp": 1790296642,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:36:45",
+        "timestamp": 1790296605,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:34:51",
+        "timestamp": 1790296491,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:31:15",
+        "timestamp": 1790296275,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:31:15",
+        "timestamp": 1790296275,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:30:48",
+        "timestamp": 1790296248,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:29:34",
+        "timestamp": 1790296174,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:24:44",
+        "timestamp": 1790295884,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:23:30",
+        "timestamp": 1790295810,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:22:50",
+        "timestamp": 1790295770,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:22:50",
+        "timestamp": 1790295770,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:22:01",
+        "timestamp": 1790295721,
+        "store": "playstore"
+    },
+    {
+        "time": "2026-09-25 00:21:57",
+        "timestamp": 1790295717,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:21:31",
+        "timestamp": 1790295691,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:21:18",
+        "timestamp": 1790295678,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:21:12",
+        "timestamp": 1790295672,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:20:08",
+        "timestamp": 1790295608,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:19:47",
+        "timestamp": 1790295587,
+        "store": "playstore"
+    },
+    {
+        "time": "2026-09-25 00:19:09",
+        "timestamp": 1790295549,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:19:03",
+        "timestamp": 1790295543,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:19:02",
+        "timestamp": 1790295542,
+        "store": "unknown"
+    },
+    {
+        "time": "2026-09-25 00:19:02",
+        "timestamp": 1790295542,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:18:38",
+        "timestamp": 1790295518,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:18:37",
+        "timestamp": 1790295517,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:17:59",
+        "timestamp": 1790295479,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:14:58",
+        "timestamp": 1790295298,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:14:33",
+        "timestamp": 1790295273,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:14:23",
+        "timestamp": 1790295263,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:14:05",
+        "timestamp": 1790295245,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:13:58",
+        "timestamp": 1790295238,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:13:19",
+        "timestamp": 1790295199,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:12:56",
+        "timestamp": 1790295176,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:12:50",
+        "timestamp": 1790295170,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:12:00",
+        "timestamp": 1790295120,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:10:31",
+        "timestamp": 1790295031,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:10:31",
+        "timestamp": 1790295031,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:09:28",
+        "timestamp": 1790294968,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:09:19",
+        "timestamp": 1790294959,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:07:49",
+        "timestamp": 1790294869,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:07:21",
+        "timestamp": 1790294841,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:06:30",
+        "timestamp": 1790294790,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:06:15",
+        "timestamp": 1790294775,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:05:35",
+        "timestamp": 1790294735,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:05:33",
+        "timestamp": 1790294733,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:05:16",
+        "timestamp": 1790294716,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:05:12",
+        "timestamp": 1790294712,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:04:56",
+        "timestamp": 1790294696,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:04:56",
+        "timestamp": 1790294696,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:04:50",
+        "timestamp": 1790294690,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:04:30",
+        "timestamp": 1790294670,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:03:48",
+        "timestamp": 1790294628,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:03:47",
+        "timestamp": 1790294627,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:03:31",
+        "timestamp": 1790294611,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:02:54",
+        "timestamp": 1790294574,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:02:31",
+        "timestamp": 1790294551,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:02:06",
+        "timestamp": 1790294526,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:01:47",
+        "timestamp": 1790294507,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:01:35",
+        "timestamp": 1790294495,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:00:51",
+        "timestamp": 1790294451,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:00:39",
+        "timestamp": 1790294439,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:00:23",
+        "timestamp": 1790294423,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:00:11",
+        "timestamp": 1790294411,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-25 00:00:07",
+        "timestamp": 1790294407,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:59:57",
+        "timestamp": 1790294397,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:59:52",
+        "timestamp": 1790294392,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:59:45",
+        "timestamp": 1790294385,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:59:13",
+        "timestamp": 1790294353,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:58:46",
+        "timestamp": 1790294326,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:56:57",
+        "timestamp": 1790294217,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:56:55",
+        "timestamp": 1790294215,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:56:48",
+        "timestamp": 1790294208,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:55:39",
+        "timestamp": 1790294139,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:55:29",
+        "timestamp": 1790294129,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:55:17",
+        "timestamp": 1790294117,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:55:15",
+        "timestamp": 1790294115,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:54:07",
+        "timestamp": 1790294047,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:53:54",
+        "timestamp": 1790294034,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:53:46",
+        "timestamp": 1790294026,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:52:18",
+        "timestamp": 1790293938,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:51:27",
+        "timestamp": 1790293887,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:48:45",
+        "timestamp": 1790293725,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 23:46:18",
+        "timestamp": 1790293578,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 21:49:03",
+        "timestamp": 1790286543,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:57:24",
+        "timestamp": 1790272644,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:25:42",
+        "timestamp": 1790270742,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:22:22",
+        "timestamp": 1790270542,
+        "store": "playstore"
+    },
+    {
+        "time": "2026-09-24 17:22:18",
+        "timestamp": 1790270538,
+        "store": "playstore"
+    },
+    {
+        "time": "2026-09-24 17:19:47",
+        "timestamp": 1790270387,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:19:17",
+        "timestamp": 1790270357,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:19:05",
+        "timestamp": 1790270345,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:18:00",
+        "timestamp": 1790270280,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:17:41",
+        "timestamp": 1790270261,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:16:53",
+        "timestamp": 1790270213,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:14:13",
+        "timestamp": 1790270053,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:14:09",
+        "timestamp": 1790270049,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:13:59",
+        "timestamp": 1790270039,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:13:50",
+        "timestamp": 1790270030,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:13:42",
+        "timestamp": 1790270022,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:13:06",
+        "timestamp": 1790269986,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:12:07",
+        "timestamp": 1790269927,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:12:03",
+        "timestamp": 1790269923,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:11:54",
+        "timestamp": 1790269914,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:10:16",
+        "timestamp": 1790269816,
+        "store": "playstore"
+    },
+    {
+        "time": "2026-09-24 17:10:10",
+        "timestamp": 1790269810,
+        "store": "playstore"
+    },
+    {
+        "time": "2026-09-24 17:09:37",
+        "timestamp": 1790269777,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:08:26",
+        "timestamp": 1790269706,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:08:26",
+        "timestamp": 1790269706,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 17:00:16",
+        "timestamp": 1790269216,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 15:45:18",
+        "timestamp": 1790264718,
+        "store": "unknown"
+    },
+    {
+        "time": "2026-09-24 15:44:57",
+        "timestamp": 1790264697,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 15:44:41",
+        "timestamp": 1790264681,
+        "store": "appstore"
+    },
+    {
+        "time": "2026-09-24 15:40:22",
+        "timestamp": 1790264422,
+        "store": "unknown"
+    }
+]
